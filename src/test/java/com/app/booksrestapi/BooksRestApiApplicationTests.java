@@ -1,0 +1,13 @@
+package com.app.booksrestapi;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+
+@SpringBootTest
+class BooksRestApiApplicationTests {
+
+    @Test
+    void contextLoads() {
+    }
+
+}
