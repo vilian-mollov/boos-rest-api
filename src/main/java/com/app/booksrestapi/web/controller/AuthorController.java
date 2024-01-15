@@ -3,7 +3,7 @@ package com.app.booksrestapi.web.controller;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping
+@RequestMapping("/authors")
 public class AuthorController {
 
     @GetMapping
