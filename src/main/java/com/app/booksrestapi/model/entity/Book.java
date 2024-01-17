@@ -4,8 +4,6 @@ import com.app.booksrestapi.model.entity.enums.Cover;
 import com.app.booksrestapi.model.entity.enums.Language;
 import jakarta.persistence.*;
 
-import java.util.List;
-
 @Entity
 @Table(name = "books")
 public class Book extends BaseEntity {
