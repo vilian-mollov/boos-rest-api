@@ -1,24 +1,29 @@
 package com.app.booksrestapi.model.entity;
 
 import jakarta.persistence.*;
+import org.hibernate.type.descriptor.java.UUIDJavaType;
 
-@Entity
+import java.util.UUID;
+
 @MappedSuperclass
 public abstract class BaseEntity {
 
+//    @Id
+//    @GeneratedValue(strategy = GenerationType.AUTO)
+//    @Column(columnDefinition = "BINARY(16)")
+//    private UUID uuid;
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private String uuid;
-
     private Long id;
 
-    public String getUuid() {
-        return uuid;
-    }
-
-    public void setUuid(String uuid) {
-        this.uuid = uuid;
-    }
+//    public UUID getUuid() {
+//        return uuid;
+//    }
+//
+//    public void setUuid(UUID uuid) {
+//        this.uuid = uuid;
+//    }
 
     public Long getId() {
         return id;
