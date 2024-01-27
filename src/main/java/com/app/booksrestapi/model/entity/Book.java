@@ -1,7 +1,6 @@
 package com.app.booksrestapi.model.entity;
 
 import com.app.booksrestapi.model.entity.enums.Cover;
-import com.app.booksrestapi.model.entity.enums.Language;
 import jakarta.persistence.*;
 
 @Entity
@@ -16,9 +15,10 @@ public class Book extends BaseEntity {
 
     @Column
     private Double weight;
-//
-//    @Column
-//    private Cover cover;
+
+    @Enumerated
+    @Column
+    private Cover cover;
 //
 //    @Column
 //    private Language originalLanguage;
@@ -30,16 +30,7 @@ public class Book extends BaseEntity {
     public Book() {
     }
 
-//    public Book(String title, int pages, float weight, Language originalLanguage, String isbn) {
-//        this.title = title;
-//        this.pages = pages;
-//        this.weight = weight;
-//        this.originalLanguage = originalLanguage;
-//        this.isbn = isbn;
-//    }
-
-
-    public Book(String title, Integer pages, Double weight) {
+    public Book(String title, Integer pages, Double weight, Cover cover) {
         this.title = title;
         this.pages = pages;
         this.weight = weight;
@@ -68,15 +59,15 @@ public class Book extends BaseEntity {
     public void setWeight(Double weight) {
         this.weight = weight;
     }
-//
-//    public Cover getCover() {
-//        return cover;
-//    }
-//
-//    public void setCover(Cover cover) {
-//        this.cover = cover;
-//    }
-//
+
+    public Cover getCover() {
+        return cover;
+    }
+
+    public void setCover(Cover cover) {
+        this.cover = cover;
+    }
+
 //    public Language getOriginalLanguage() {
 //        return originalLanguage;
 //    }
