@@ -1,7 +1,6 @@
 package com.app.booksrestapi.model.entity;
 
 import jakarta.persistence.*;
-import java.sql.Timestamp;
 import java.time.Year;
 
 @Entity
@@ -20,8 +19,8 @@ public class Author extends BaseEntity {
     @Column
     private Integer age;
 
-//    @Column       //TODO create country entity and db table not a column
-//    private Country citizenship;
+    @ManyToOne
+    private Country citizenship;
 
     @Column(length = 4)
     private Integer bornOn;
@@ -32,12 +31,13 @@ public class Author extends BaseEntity {
     public Author() {
     }
 
-    public Author(String firstName, String middleName, String lastName, Integer age, Integer bornOn, Integer diedOn) {
+    public Author(String firstName, String middleName, String lastName, Integer age, Country citizenship, Integer bornOn, Integer diedOn) {
         this.firstName = firstName;
         this.middleName = middleName;
         this.lastName = lastName;
         this.bornOn = bornOn;
         this.diedOn = diedOn;
+        this.citizenship = citizenship;
         this.setAge(this.calculateAge(bornOn, diedOn));
     }
 
@@ -71,6 +71,14 @@ public class Author extends BaseEntity {
 
     public void setAge(Integer age) {
         this.age = age;
+    }
+
+    public Country getCitizenship() {
+        return citizenship;
+    }
+
+    public void setCitizenship(Country citizenship) {
+        this.citizenship = citizenship;
     }
 
     public Integer getBornOn() {
