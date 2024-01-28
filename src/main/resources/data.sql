@@ -1,4 +1,5 @@
-DELETE FROM `books-rest-api-db`.languages;
+DELETE FROM languages;
+DELETE FROM countries;
 DELETE FROM books;
 DELETE FROM authors;
 
@@ -6,7 +7,7 @@ DELETE FROM authors;
 # Languages -------------------------------------------------------------------------------------------------
 
 INSERT INTO languages ( `code`, `name` )
-VALUES ("BG", "Bulgarian");
+VALUES ("XX", "X");
 
 INSERT INTO languages ( `code`, `name` )
 VALUES ("BG", "Bulgarian");
@@ -86,11 +87,84 @@ VALUES ("LV", "Latvian");
 INSERT INTO languages ( code, name )
 VALUES ("KO", "Korean");
 
+# Countries ---------------------------------------------------------------------------------------------
+
+INSERT INTO countries ( `code`, `name`, `official_state_name` )
+VALUES ("XX", "X", "X");
+
+INSERT INTO countries ( `code`, `name`, `official_state_name` )
+VALUES ("BG", "Bulgaria", "The Republic of Bulgaria");
+
+INSERT INTO countries ( `code`, `name`, `official_state_name` )
+VALUES ("GB", " United Kingdom of Great Britain and Northern Ireland", "The United Kingdom of Great Britain and Northern Ireland");
+
+INSERT INTO countries ( `code`, `name`, `official_state_name` )
+VALUES ("US", "United States of America", "The United States of America");
+
+INSERT INTO countries ( `code`, `name`, `official_state_name` )
+VALUES ("DE", "Germany", "The Federal Republic of Germany");
+
+INSERT INTO countries ( `code`, `name`, `official_state_name` )
+VALUES ("EE", "Estonia", "The Republic of Estonia");
+
+INSERT INTO countries ( `code`, `name`, `official_state_name` )
+VALUES ("FI", "Finland", "The Republic of Finland");
+
+INSERT INTO countries ( `code`, `name`, `official_state_name` )
+VALUES ("SA", "Saudi Arabia", "The Kingdom of Saudi Arabia");
+
+INSERT INTO countries ( `code`, `name`, `official_state_name` )
+VALUES ("AE", "United Arab Emirates", "The United Arab Emirates");
+
+INSERT INTO countries ( `code`, `name`, `official_state_name` )
+VALUES ("DK", "Denmark", "The Kingdom of Denmark");
+
+INSERT INTO countries ( `code`, `name`, `official_state_name` )
+VALUES ("IT", " Italy", "The Italian Republic");
+
+INSERT INTO countries ( `code`, `name`, `official_state_name` )
+VALUES ("CN", "China", "The People's Republic of China");
+
+INSERT INTO countries ( `code`, `name`, `official_state_name` )
+VALUES ("BA", "Bosnia and Herzegovina", "Bosnia and Herzegovina");
+
+INSERT INTO countries ( `code`, `name`, `official_state_name` )
+VALUES ("HU", "Hungary", "Hungary");
+
+INSERT INTO countries ( `code`, `name`, `official_state_name` )
+VALUES ("JP", "Japan", "Japan");
+
+INSERT INTO countries ( `code`, `name`, `official_state_name` )
+VALUES ("LU", "Luxembourg", "The Grand Duchy of Luxembourg");
+
+INSERT INTO countries ( `code`, `name`, `official_state_name` )
+VALUES ("NO", "Norway", "The Kingdom of Norway");
+
+INSERT INTO countries ( `code`, `name`, `official_state_name` )
+VALUES ("NP", "Nepal", "The Federal Democratic Republic of Nepal");
+
+INSERT INTO countries ( `code`, `name`, `official_state_name` )
+VALUES ("RU", "Russian Federation", "The Russian Federation");
+
+INSERT INTO countries ( `code`, `name`, `official_state_name` )
+VALUES ("SE", "Sweden", "The Kingdom of Sweden");
+
+INSERT INTO countries ( `code`, `name`, `official_state_name` )
+VALUES ("UA", "Ukraine", "Ukraine");
+
+INSERT INTO countries ( `code`, `name`, `official_state_name` )
+VALUES ("SR", "Serbia", "The Republic of Serbia");
+
+INSERT INTO countries ( `code`, `name`, `official_state_name` )
+VALUES ("LV","Latvia" ,"The Republic of Latvia");
+
+INSERT INTO countries ( `code`, `name`, `official_state_name` )
+VALUES ("KR", "Korea", "The Republic of Korea");
 
 # Books -------------------------------------------------------------------------------------------------
 
 INSERT INTO books ( id, pages,  title, weight, cover )
-VALUES (1, 352, 'Harry Potter and the philosopher\'s stone', 0.290, 1);
+VALUES (0, 0, 'X', 0.0, 0);
 
 INSERT INTO books ( id, pages,  title, weight, cover )
 VALUES (1, 352, 'Harry Potter and the philosopher\'s stone', 0.290, 1);
