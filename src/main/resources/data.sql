@@ -1,10 +1,14 @@
-DELETE FROM languages;
+DELETE FROM `books-rest-api-db`.languages;
 DELETE FROM books;
 DELETE FROM authors;
 
 
 # Languages -------------------------------------------------------------------------------------------------
-INSERT INTO languages ( code, name )
+
+INSERT INTO languages ( `code`, `name` )
+VALUES ("BG", "Bulgarian");
+
+INSERT INTO languages ( `code`, `name` )
 VALUES ("BG", "Bulgarian");
 
 INSERT INTO languages ( code, name )
@@ -84,6 +88,10 @@ VALUES ("KO", "Korean");
 
 
 # Books -------------------------------------------------------------------------------------------------
+
+INSERT INTO books ( id, pages,  title, weight, cover )
+VALUES (1, 352, 'Harry Potter and the philosopher\'s stone', 0.290, 1);
+
 INSERT INTO books ( id, pages,  title, weight, cover )
 VALUES (1, 352, 'Harry Potter and the philosopher\'s stone', 0.290, 1);
 
@@ -107,3 +115,32 @@ VALUES (7, 200, 'Politics', 0.277825327, 0 );
 
 INSERT INTO books ( id, pages,  title, weight, cover )
 VALUES (8, 108, 'The Bible', 0.159, 0);
+
+# Authors ------------------------------------------------------------------------------------------------
+
+INSERT INTO authors ( id, born_on, died_on, first_name, middle_name, last_name)
+VALUES (1, '1965', null, "Joanne", "Kathleen", "Rowling" );
+
+INSERT INTO authors ( id, born_on, died_on, first_name, middle_name, last_name)
+VALUES (1, '1965', null, "Joanne", "Kathleen", "Rowling" );
+
+INSERT INTO authors ( id, born_on, died_on, first_name, middle_name, last_name)
+VALUES (2, '1947', null, "Robert", "Toru", "Kiyosaki" );
+
+INSERT INTO authors ( id, born_on, died_on, first_name, middle_name, last_name)
+VALUES (3, '1847', '1912', "Abraham ", "", "Stoker" );
+
+INSERT INTO authors ( id, born_on, died_on, first_name, middle_name, last_name)
+VALUES (4, '1874', '1957', "George", "Samuel", "Clason" );
+
+INSERT INTO authors ( id, born_on, died_on, first_name, middle_name, last_name)
+VALUES (5, '1828', '1910', "Lev", "Nikolayevich", "Tolstoy" );
+
+INSERT INTO authors ( id, born_on, died_on, first_name, middle_name, last_name)
+VALUES (6, '1724', '1804', "Immanuel", "", "Kant" );
+
+INSERT INTO authors ( id, born_on, died_on, first_name, middle_name, last_name)
+VALUES (7, '-428', '-348', "Plato", "", "" );
+
+INSERT INTO authors ( id, born_on, died_on, first_name, middle_name, last_name)
+VALUES (8, '-384', '-322', "Aristotle", "", "" );
