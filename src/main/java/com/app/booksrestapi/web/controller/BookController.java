@@ -25,8 +25,13 @@ public class BookController {
     }
 
     @GetMapping("/{id}")
-    public void getSingleBook(@PathVariable("id") Long id) {
-//        TODO get single book
+    public Book getSingleBook(@PathVariable("id") Long id) {
+        return bookService.getBookById(id);
+    }
+
+    @GetMapping("/author/{id}")
+    public List<Book> getAllBooksByAuthorId(@PathVariable("id") Long id) {
+        return bookService.getAllBooksByAuthorId(id);
     }
 
 
