@@ -1,5 +1,6 @@
 package com.app.booksrestapi.repository;
 
+import com.app.booksrestapi.model.entity.Author;
 import com.app.booksrestapi.model.entity.Book;
 import jakarta.transaction.Transactional;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -12,10 +13,8 @@ import java.util.Optional;
 @Repository
 public interface BookRepository extends JpaRepository<Book, Long> {
 
-//    @Override
-////    @Transactional(timeout = 10)
-//    List<Book> findAll();
+    Book findFirstById(Long id);
 
-    Optional<Book> findFirstById(Long id);
+    List<Book> findAllByAuthor(Author author);
 
 }
