@@ -27,8 +27,8 @@ public class AuthorController {
     }
 
     @GetMapping("/{id}")
-    public void getSingleAuthor(@PathVariable("id") Long id) {
-//        TODO get single author
+    public ResponseEntity<Author> getSingleAuthor(@PathVariable("id") Long id) {
+        return ResponseEntity.ok(authorService.getSingleAuthor(id));
     }
 
 }

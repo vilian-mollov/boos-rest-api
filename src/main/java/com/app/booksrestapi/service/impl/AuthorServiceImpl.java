@@ -22,4 +22,9 @@ public class AuthorServiceImpl implements AuthorService {
     public List<Author> getAllAuthors() {
         return authorRepository.findAll();
     }
+
+    @Override
+    public Author getSingleAuthor(Long id) {
+       return authorRepository.findFirstById(id);
+    }
 }
