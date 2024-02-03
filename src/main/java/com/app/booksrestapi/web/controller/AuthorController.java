@@ -3,7 +3,6 @@ package com.app.booksrestapi.web.controller;
 
 import com.app.booksrestapi.model.entity.Author;
 import com.app.booksrestapi.service.AuthorService;
-import com.app.booksrestapi.service.impl.AuthorServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
