@@ -17,4 +17,38 @@ public class Country {
 
     @Column(length = 100)
     private String officialStateName;
+
+    public Country() {
+    }
+
+    public Country(@NonNull String code, String name, String officialStateName) {
+        this.code = code;
+        this.name = name;
+        this.officialStateName = officialStateName;
+    }
+
+    @NonNull
+    public String getCode() {
+        return code;
+    }
+
+    public void setCode(@NonNull String code) {
+        this.code = code;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getOfficialStateName() {
+        return officialStateName;
+    }
+
+    public void setOfficialStateName(String officialStateName) {
+        this.officialStateName = officialStateName;
+    }
 }
