@@ -172,35 +172,6 @@ VALUES ("RO", "Romania", "Romania");
 INSERT INTO countries ( `code`, `name`, `official_state_name` )
 VALUES ("XG", "Ancient Greece", "Ancient Greece");
 
-# Books -------------------------------------------------------------------------------------------------
-
-INSERT INTO books ( id, pages,  title, weight, cover, original_language_code )
-VALUES (0, 0, 'X', 0.0, 0, 'XX');
-
-INSERT INTO books ( id, pages,  title, weight, cover, original_language_code )
-VALUES (1, 352, 'Harry Potter and the philosopher\'s stone', 0.290, 1,'EN');
-
-INSERT INTO books (  id, pages,  title, weight, cover, original_language_code )
-VALUES (2, 418, 'Dracula', 0.952543977, 0, 'RO');
-
-INSERT INTO books ( id, pages,  title, weight, cover, original_language_code )
-VALUES (3, 1504 ,'The Richest Man in Babylon', 0.816466266, 1, 'EN');
-
-INSERT INTO books ( id, pages,  title, weight, cover, original_language_code )
-VALUES (4, 1225, 'War and Peace', 1.81436948, 1, 'RU');
-
-INSERT INTO books ( id, pages,  title, weight, cover, original_language_code )
-VALUES (5, 692, 'The Republic', 0.330, 1, 'EN');
-
-INSERT INTO books ( id, pages,  title, weight, cover, original_language_code )
-VALUES (6, 100, 'The Critique of the Pure Reason', 0.571526386, 1, 'EN');
-
-INSERT INTO books ( id, pages,  title, weight, cover, original_language_code )
-VALUES (7, 200, 'Politics', 0.277825327, 0, 'EN' );
-
-INSERT INTO books ( id, pages,  title, weight, cover, original_language_code )
-VALUES (8, 108, 'The Bible', 0.159, 0, 'EN');
-
 # Authors ------------------------------------------------------------------------------------------------
 
 INSERT INTO authors ( id, born_on, died_on, first_name, middle_name, last_name, citizenship_code)
@@ -229,3 +200,50 @@ VALUES (7, '-428', '-348', "Plato", '', '', 'XG' );
 
 INSERT INTO authors ( id, born_on, died_on, first_name, middle_name, last_name, citizenship_code)
 VALUES (8, '-384', '-322', "Aristotle", '', '', 'XG' );
+
+# Books -------------------------------------------------------------------------------------------------
+
+INSERT INTO books ( id, pages,  title, weight, cover, original_language_code )
+VALUES (0, 0, 'X', 0.0, 0, 'XX');
+
+INSERT INTO books ( id, pages,  title, weight, cover, original_language_code, author_id )
+VALUES (1, 352, 'Harry Potter and the philosopher\'s stone', 0.290, 1,'EN', 1);
+
+INSERT INTO books (  id, pages,  title, weight, cover, original_language_code, author_id )
+VALUES (2, 418, 'Dracula', 0.952543977, 0, 'RO', 3);
+
+INSERT INTO books ( id, pages,  title, weight, cover, original_language_code, author_id )
+VALUES (3, 1504 ,'The Richest Man in Babylon', 0.816466266, 1, 'EN', 4);
+
+INSERT INTO books ( id, pages,  title, weight, cover, original_language_code, author_id  )
+VALUES (4, 1225, 'War and Peace', 1.81436948, 1, 'RU', 5);
+
+INSERT INTO books ( id, pages,  title, weight, cover, original_language_code, author_id  )
+VALUES (5, 692, 'The Republic', 0.330, 1, 'EN', 7);
+
+INSERT INTO books ( id, pages,  title, weight, cover, original_language_code, author_id  )
+VALUES (6, 100, 'The Critique of the Pure Reason', 0.571526386, 1, 'EN', 6);
+
+INSERT INTO books ( id, pages,  title, weight, cover, original_language_code, author_id  )
+VALUES (7, 200, 'Politics', 0.277825327, 0, 'EN', 8 );
+
+INSERT INTO books ( id, pages,  title, weight, cover, original_language_code )
+VALUES (8, 108, 'The Bible', 0.159, 0, 'EN');
+
+INSERT INTO books ( id, pages,  title, weight, cover, original_language_code, author_id )
+VALUES (9, 384, 'Harry Potter and the Chamber of Secrets', 0.308, 1, 'EN', 1);
+
+INSERT INTO books ( id, pages,  title, weight, cover, original_language_code, author_id )
+VALUES (10, 480, 'Harry Potter and the Prisoner of Azkaban', 0.387, 1, 'EN', 1);
+
+INSERT INTO books ( id, pages,  title, weight, cover, original_language_code, author_id )
+VALUES (11, 640, 'Harry Potter and the Goblet of Fire', 0.505, 1, 'EN', 1);
+
+INSERT INTO books ( id, pages,  title, weight, cover, original_language_code, author_id )
+VALUES (12, 816, 'Harry Potter and the Order of the Phoenix', 0.640, 1, 'EN', 1);
+
+INSERT INTO books ( id, pages,  title, weight, cover, original_language_code, author_id )
+VALUES (13, 560, 'Harry Potter and the Half-Blood Prince', 0.445, 1, 'EN', 1);
+
+INSERT INTO books ( id, pages,  title, weight, cover, original_language_code, author_id )
+VALUES (14, 640, 'Harry Potter and the Deathly Hallows', 0.505, 1, 'EN', 1);
