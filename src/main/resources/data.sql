@@ -201,6 +201,18 @@ VALUES (7, '-428', '-348', "Plato", '', '', 'XG' );
 INSERT INTO authors ( id, born_on, died_on, first_name, middle_name, last_name, citizenship_code)
 VALUES (8, '-384', '-322', "Aristotle", '', '', 'XG' );
 
+INSERT INTO authors ( id, born_on, died_on, first_name, middle_name, last_name, citizenship_code)
+VALUES (9, '1874', '1963', "Robert", 'Lee', 'Frost', 'US' );
+
+INSERT INTO authors ( id, born_on, died_on, first_name, middle_name, last_name, citizenship_code)
+VALUES (10, '1816', '1855', "Charlotte", '', 'Bronte', 'GB' );
+
+INSERT INTO authors ( id, born_on, died_on, first_name, middle_name, last_name, citizenship_code)
+VALUES (11, '1818', '1848', "Emily", 'Jane', 'Bronte', 'GB' );
+
+INSERT INTO authors ( id, born_on, died_on, first_name, middle_name, last_name, citizenship_code)
+VALUES (12, '1820', '1849', "Anne", '', 'Bronte', 'GB' );
+
 # Books -------------------------------------------------------------------------------------------------
 
 INSERT INTO books ( id, pages,  title, weight, cover, original_language_code )
