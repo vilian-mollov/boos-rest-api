@@ -30,4 +30,16 @@ public class AuthorController {
         return ResponseEntity.ok(authorService.getSingleAuthor(id));
     }
 
+
+    @GetMapping("/first-name/{name}")
+    public ResponseEntity<List<Author>> getAuthorsByFirstName(@PathVariable("name") String name) {
+        return ResponseEntity.ok(authorService.getAllAuthorsByName(name, "first"));
+    }
+
+    @GetMapping("/last-name/{name}")
+    public ResponseEntity<List<Author>> getAuthorsByLastName(@PathVariable("name") String name) {
+        return ResponseEntity.ok(authorService.getAllAuthorsByName(name, "last"));
+    }
+
+
 }

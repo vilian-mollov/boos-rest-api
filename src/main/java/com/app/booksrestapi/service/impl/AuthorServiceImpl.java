@@ -27,4 +27,16 @@ public class AuthorServiceImpl implements AuthorService {
     public Author getSingleAuthor(Long id) {
        return authorRepository.findFirstById(id);
     }
+
+    @Override
+    public List<Author> getAllAuthorsByName(String name, String firstOrLast) {
+
+        if(firstOrLast.equals("first")){
+            return authorRepository.findAllByFirstName(name);
+        }
+
+        return authorRepository.findAllByLastName(name);
+    }
+
+
 }

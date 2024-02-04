@@ -9,4 +9,7 @@ public interface AuthorService {
     public List<Author> getAllAuthors();
 
     public Author getSingleAuthor(Long id);
+
+    public List<Author> getAllAuthorsByName(String name, String firstOrLast);
+
 }
