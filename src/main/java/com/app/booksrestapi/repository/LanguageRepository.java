@@ -6,4 +6,6 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface LanguageRepository extends JpaRepository<Language, String> {
+
+    Language findFirstByCode(String code);
 }
