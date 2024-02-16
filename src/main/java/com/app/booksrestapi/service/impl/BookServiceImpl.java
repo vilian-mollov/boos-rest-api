@@ -1,9 +1,7 @@
 package com.app.booksrestapi.service.impl;
 
-import com.app.booksrestapi.model.entity.Author;
-import com.app.booksrestapi.model.entity.Book;
-import com.app.booksrestapi.repository.AuthorRepository;
-import com.app.booksrestapi.repository.BookRepository;
+import com.app.booksrestapi.model.entity.*;
+import com.app.booksrestapi.repository.*;
 import com.app.booksrestapi.service.BookService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -15,12 +13,15 @@ public class BookServiceImpl implements BookService {
 
     private BookRepository bookRepository;
     private AuthorRepository authorRepository;
+    private LanguageRepository languageRepository;
 
     @Autowired
     public BookServiceImpl(BookRepository bookRepository,
-                           AuthorRepository authorRepository) {
+                           AuthorRepository authorRepository,
+                           LanguageRepository languageRepository) {
         this.bookRepository = bookRepository;
         this.authorRepository = authorRepository;
+        this.languageRepository = languageRepository;
     }
 
     @Override
@@ -41,6 +42,13 @@ public class BookServiceImpl implements BookService {
         List<Book> books = bookRepository.findAllByAuthor(author);
 
         return books;
+    }
+
+    @Override
+    public List<Book> getAllBooksByLanguageCode(String lang_code) {
+
+        Language lang = languageRepository.findFirstByCode(lang_code);
+        return bookRepository.findAllByOriginalLanguage(lang);
     }
 
 }

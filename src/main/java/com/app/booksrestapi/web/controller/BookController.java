@@ -30,15 +30,15 @@ public class BookController {
     }
 
 
-    @GetMapping
-    public ResponseEntity<List<Book>> getAllBooksByLanguage() {
-        return null; //todo
+    @GetMapping("lang/{lng_code}")
+    public ResponseEntity<List<Book>> getAllBooksByLanguage(@PathVariable("lng_code") String lng_code) {
+        return ResponseEntity.ok(bookService.getAllBooksByLanguageCode(lng_code));
     }
 
 
     @GetMapping("/author/{id}")
-    public List<Book> getAllBooksByAuthorId(@PathVariable("id") Long id) {
-        return bookService.getAllBooksByAuthorId(id);
+    public ResponseEntity<List<Book>> getAllBooksByAuthorId(@PathVariable("id") Long id) {
+        return ResponseEntity.ok(bookService.getAllBooksByAuthorId(id));
     }
 
 
